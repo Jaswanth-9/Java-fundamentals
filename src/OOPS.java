@@ -38,13 +38,9 @@ class baseburger {
         int price1 = 0;
         if (roll > 0 && roll < 5) {
             if (roll == 1) price1 = 10;
-             else if (roll == 2) {
-                price1 = 20;
-            } else if (roll == 3) {
-                price1 = 30;
-            } else if (roll == 4) {
-                price1 = 40;
-            }
+            else if (roll == 2) price1 = 20;
+            else if (roll == 3) price1 = 30;
+            else if (roll == 4) price1 = 40;
         } else {
             System.out.println(" Enter valid roll type ");
             System.exit(0);
