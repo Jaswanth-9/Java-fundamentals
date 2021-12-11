@@ -2,6 +2,7 @@
 public class OOPS {
     public static void main(String[] args) {
         baseburger b = new baseburger(4, 2, 1, 0, 1);
+        healthyburger hb = new healthyburger(3 , 2);
     }
 }
 
@@ -103,7 +104,7 @@ class baseburger {
         }
     }
 
-    private void total() {
+    public void total() {
         System.out.println("--------BREAD & MEAT--------");
         System.out.println("         TYPE    PRICE");
         System.out.println("BREAD  : " + roll + "       " + price1);
@@ -124,12 +125,13 @@ class healthyburger extends baseburger{
     private int price1 =0;
     private int price2=0;
     baseburger b;
-    public healthyburger( int r, int m, int e, int br ){
+    public healthyburger( int e, int br ){
         super( 4, 3,0,0,0);
         eggs = e;
         broccoli = br;
         egg_number(eggs);
         broccoli_number(broccoli);
+        b.total();
     }
     private void egg_number(int eggs) {
         int price1 = 0;
