@@ -9,12 +9,12 @@ public class OOPS {
 }
 
 class baseburger {
-    private int roll;
-    private int meat;
+    public int roll;
+    public int meat;
     private int eggs;
     private int corn;
     private int spice;
-    private int price;
+    public int price;
     public int price1;
     public int price2;
     private int price3;
