@@ -2,7 +2,9 @@
 public class OOPS {
     public static void main(String[] args) {
         baseburger b = new baseburger(4, 2, 1, 0, 1);
+        b.total();
         healthyburger hb = new healthyburger(3 , 2);
+        hb.total();
     }
 }
 
@@ -30,7 +32,7 @@ class baseburger {
         tomato_number(eggs);
         corn_number(corn);
         spice_number(spice);
-        total();
+        //total();
     }
 
     private void rolltype(int roll) {
@@ -121,21 +123,21 @@ class baseburger {
 class healthyburger extends baseburger{
     private int eggs;
     private int broccoli;
-    private int price;
+    private int price = super.price1 + super.price2;
     private int price1 =0;
     private int price2=0;
     public healthyburger( int e, int br ){
-        super( 4, 3,0,0,0);
+        super( 2, 1,0,0,0);
         eggs = e;
         broccoli = br;
         egg_number(eggs);
         broccoli_number(broccoli);
-        total();
+       // total();
     }
     private void egg_number(int eggs) {
         int price1 = 0;
-        if (this.eggs >= 0) {
-            price1 = this.eggs * 10;
+        if (eggs >= 0) {
+            price1 = eggs * 5;
             price = price + price1;
             this.price1 = price1;
         } else {
@@ -157,8 +159,8 @@ class healthyburger extends baseburger{
     public void total() {
         System.out.println("--------BREAD & MEAT--------");
         System.out.println("         TYPE    PRICE");
-        System.out.println("BREAD     : " + 4 + "       " + super.price1);
-        System.out.println("MEAT      : " + 3 + "       " + super.price2);
+        System.out.println("BREAD     : " + 2 + "       " + super.price1);
+        System.out.println("MEAT      : " + 1 + "       " + super.price2);
         System.out.println("--------  ADD-ON's  --------");
         System.out.println("EGGS      x " + eggs + "       " + price1);
         System.out.println("BROCCOLI  x " + broccoli + "       " + price2);
@@ -166,7 +168,3 @@ class healthyburger extends baseburger{
         System.out.println("TOTAL  : " + price);
     }
 }
-
-
-
-
