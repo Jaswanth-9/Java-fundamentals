@@ -1,5 +1,3 @@
-import jdk.swing.interop.SwingInterOpUtils;
-
 //import java.util.Scanner;
 public class OOPS {
     public static void main(String[] args) {
@@ -10,7 +8,7 @@ public class OOPS {
 class baseburger {
     private int roll;
     private int meat;
-    private int tomato;
+    private int eggs;
     private int corn;
     private int spice;
     private int price;
@@ -23,12 +21,12 @@ class baseburger {
     public baseburger(int r, int m, int t, int c, int s) {
         roll = r;
         meat = m;
-        tomato = t;
+        eggs = t;
         corn = c;
         spice = s;
         rolltype(roll);
         meattype(meat);
-        tomato_number(tomato);
+        tomato_number(eggs);
         corn_number(corn);
         spice_number(spice);
         total();
@@ -111,11 +109,49 @@ class baseburger {
         System.out.println("BREAD  : " + roll + "       " + price1);
         System.out.println("MEAT   : " + meat + "       " + price2);
         System.out.println("--------  ADD-ON's  --------");
-        System.out.println("TOMATO x " + tomato + "       " + price3);
+        System.out.println("TOMATO x " + eggs + "       " + price3);
         System.out.println("CORN   x " + corn + "       " + price4);
         System.out.println("SPICE  x " + spice + "       " + price5);
         System.out.println("----------------------------");
         System.out.println("TOTAL  : " + price);
+    }
+}
+
+class healthyburger extends baseburger{
+    private int eggs;
+    private int broccoli;
+    private int price;
+    private int price1 =0;
+    private int price2=0;
+    baseburger b;
+    public healthyburger( int r, int m, int e, int br ){
+        super( 4, 3,0,0,0);
+        eggs = e;
+        broccoli = br;
+        egg_number(eggs);
+        broccoli_number(broccoli);
+    }
+    private void egg_number(int eggs) {
+        int price1 = 0;
+        if (this.eggs >= 0) {
+            price1 = this.eggs * 10;
+            price = price + price1;
+            this.price1 = price1;
+        } else {
+            System.out.println(" Enter valid number eggs ");
+            System.exit(0);
+        }
+    }
+    private void broccoli_number(int broccoli) {
+        int price2 = 0;
+        if (broccoli >= 0) {
+            price2 = broccoli * 10;
+            price = price + price2;
+            this.price2 = price2;
+        } else {
+            System.out.println(" Enter valid number of broccoli ");
+            System.exit(0);
+        }
     }
 }
 
