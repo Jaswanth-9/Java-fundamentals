@@ -13,8 +13,8 @@ class baseburger {
     private int corn;
     private int spice;
     private int price;
-    private int price1;
-    private int price2;
+    public int price1;
+    public int price2;
     private int price3;
     private int price4;
     private int price5;
@@ -124,14 +124,13 @@ class healthyburger extends baseburger{
     private int price;
     private int price1 =0;
     private int price2=0;
-    baseburger b;
     public healthyburger( int e, int br ){
         super( 4, 3,0,0,0);
         eggs = e;
         broccoli = br;
         egg_number(eggs);
         broccoli_number(broccoli);
-        b.total();
+        total();
     }
     private void egg_number(int eggs) {
         int price1 = 0;
@@ -154,6 +153,17 @@ class healthyburger extends baseburger{
             System.out.println(" Enter valid number of broccoli ");
             System.exit(0);
         }
+    }
+    public void total() {
+        System.out.println("--------BREAD & MEAT--------");
+        System.out.println("         TYPE    PRICE");
+        System.out.println("BREAD     : " + 4 + "       " + super.price1);
+        System.out.println("MEAT      : " + 3 + "       " + super.price2);
+        System.out.println("--------  ADD-ON's  --------");
+        System.out.println("EGGS      x " + eggs + "       " + price1);
+        System.out.println("BROCCOLI  x " + broccoli + "       " + price2);
+        System.out.println("----------------------------");
+        System.out.println("TOTAL  : " + price);
     }
 }
 
