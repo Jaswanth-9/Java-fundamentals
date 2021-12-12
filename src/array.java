@@ -5,6 +5,7 @@ public class array {
         System.out.print("Enter no.of values to be sorted : ");
         int s1 = s.nextInt();
         values v = new values(s1);
+        v.getvalues(s1);
     }
 }
 
@@ -13,7 +14,6 @@ class values{
         public values(int n)
         {
             n1 = n;
-            getvalues(n1);
         }
         public void getvalues(int n1){
             Scanner z = new Scanner(System.in);
