@@ -11,6 +11,7 @@ public class array {
 
 class values{
     private int n1;
+    private int[] a = new int[n1];
         public values(int n)
         {
             n1 = n;
@@ -18,7 +19,6 @@ class values{
         public void getvalues(int n1){
             Scanner z = new Scanner(System.in);
             System.out.println("Enter the values : ");
-            int[] a = new int[n1];
             for(int i = 0; i < this.n1; i++)
             {
                 a[i] = z.nextInt();
@@ -31,5 +31,5 @@ class values{
                 System.out.print(a[i]+" ");
             }
         }
-}
+ }
 
