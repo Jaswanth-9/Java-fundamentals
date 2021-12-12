@@ -4,9 +4,12 @@ public class array {
     Scanner s = new Scanner(System.in);
         System.out.print("Enter no.of values to be sorted : ");
         int s1 = s.nextInt();
-        values v = new values(s1);
-        v.getvalues(s1);
-        v.sortarray();
+        if(s1 < 2)  System.exit(1);
+        else {
+            values v = new values(s1);
+            v.getvalues(s1);
+            v.sortarray();
+        }
     }
 }
 
