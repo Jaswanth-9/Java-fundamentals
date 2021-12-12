@@ -44,7 +44,7 @@ class values{
                     }
                 }
             }
-            System.out.print(" Sorted array : ");
+            System.out.println(" Sorted array : ");
             for( int i = 0; i<n1; i++){
                 System.out.print(a[i]+" ");
             }
