@@ -2,13 +2,19 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class arraylist {
     public static void main(String[] args) {
-
+        mobile b = new mobile(" jaswanth", " 9874563210");
+        b.createcontact();
     }
 }
 
 class mobile{
-    public ArrayList<String> contact;
-    public void addcontact(String name, long number){
-        contact.add(name);
+    private String name;
+    private String phoneno;
+    public mobile( String n, String no){
+        name = n;
+        phoneno = no;
+    }
+    public mobile createcontact(){
+        return new mobile(name, phoneno);
     }
 }
