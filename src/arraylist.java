@@ -13,6 +13,7 @@ public class arraylist {
                 s.nextLine();
                 System.out.print("Enter number : ");
                 String s2 = s.nextLine();
+                s.nextLine();
                 contactvalues c = new contactvalues(s1,s2);
                 System.out.println(c.getname());
                 System.out.println(c.getnumber());
