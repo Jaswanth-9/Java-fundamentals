@@ -1,5 +1,40 @@
 import java.util.Scanner;
 public class linkedlist {
+    public static void insert(node<Integer> head, int ele, int pos){
+        if(head == null ) {
+            System.out.println("Empty linked list");
+            return;
+        }
+        node<Integer> current = new node<Integer>(ele);
+       // node<Integer> temp = head;
+        node<Integer> prevnode = head;
+      //  node<Integer> nextnode = temp;
+        int c = 0;
+        while(c < pos -1 && prevnode != null){
+         //   temp = temp.next;
+            c++;
+            prevnode = prevnode.next;
+//            if(c == pos - 1){
+//                prevnode = temp;
+//                nextnode = temp.next;
+//                break;
+//            }
+//            else if( c == pos){
+//                nextnode = temp;
+//                break;
+//            }
+        }
+        if(prevnode != null) {
+            current.next = prevnode.next;
+            prevnode.next = current;
+            node<Integer> temp1 = head;
+            while(temp1 != null){
+                System.out.print(temp1.data + " ");
+                temp1 = temp1.next;
+            }
+        }
+
+    }
     public static void main(String[] args){
         Scanner s = new Scanner(System.in);
         node<Integer> head = null;
@@ -22,6 +57,9 @@ public class linkedlist {
             System.out.print(temp.data + " ");
             temp = temp.next;
         }
+        System.out.println();
+
+        insert(head, 5, 10);
     }
 }
 
